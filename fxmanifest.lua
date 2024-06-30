@@ -1,5 +1,7 @@
-resource_manifest_version '44febabe-d386-4d18-afbe-5e627f4af937'
-
+fx_version 'cerulean'
+use_experimental_fxv2_oal 'yes'
+lua54 'yes'
+game 'gta5'
 name 'Blip Info Utility'
 author 'glitchdetector'
 contact 'glitchdetector@gmail.com'
@@ -20,12 +22,14 @@ usage [[
 
 client_script 'blip_info.lua'
 
-export 'ResetBlipInfo'
-export 'SetBlipInfo'
-export 'SetBlipInfoTitle'
-export 'SetBlipInfoImage'
-export 'SetBlipInfoEconomy'
-export 'AddBlipInfoText'
-export 'AddBlipInfoName'
-export 'AddBlipInfoHeader'
-export 'AddBlipInfoIcon'
+exports {
+    'ResetBlipInfo',
+    'SetBlipInfo',
+    'SetBlipInfoTitle',
+    'SetBlipInfoImage',
+    'SetBlipInfoEconomy',
+    'AddBlipInfoText',
+    'AddBlipInfoName',
+    'AddBlipInfoHeader',
+    'AddBlipInfoIcon'
+}
