@@ -211,7 +211,7 @@ end
 local function generateLabel(text)
     local label <const> = "LBL" .. labelsCount
     AddTextEntry(label, text)
-    labelsCount = labelsCount + 1
+    labelsCount += 1
     return label
 end
 
@@ -252,7 +252,7 @@ end
 -- @param style The style of the text
 local function addTextToDisplay(title, desc, style)
     setText(entriesCount, generateLabel(title), generateLabel(desc), style or 1)
-    entriesCount = entriesCount + 1
+    entriesCount += 1
 end
 
 --- Add icon to display
@@ -263,7 +263,7 @@ end
 -- @param checked If the icon is checked
 local function addIconToDisplay(title, desc, icon, color, checked)
     setIcon(entriesCount, generateLabel(title), generateLabel(desc), icon, color, checked)
-    entriesCount = entriesCount + 1
+    entriesCount += 1
 end
 
 --- Main thread to update blip info display
